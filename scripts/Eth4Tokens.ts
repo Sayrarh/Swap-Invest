@@ -28,11 +28,11 @@ async function main() {
     console.log("eth balance before swap", ETH_bal);
    
     const UNIRouter = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
-    const amountOut = ethers.utils.parseUnits("1", "18");
+    const amountOut = ethers.utils.parseUnits("67", "18");
 
     // contract of uniswap helping us to swap
     const UNISWAP = await ethers.getContractAt("IUniswap", UNIRouter, impersonatedSigner);
-    const amountInMax = ethers.utils.parseUnits("1", "18");;
+    const amountInMax = ethers.utils.parseUnits("60", "18");;
     const deadline = Math.floor(Date.now() / 1000) + (60 * 10);
     await USDT.approve(UNIRouter, amountOut);
 

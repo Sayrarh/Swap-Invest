@@ -1,14 +1,5 @@
-//interact with uniswap swapTokenforExactToken function
-  //swap usdt to dai
-  //TO-DO
-  //erc20 token interface
-  //Approve the uniswap contract
-  //check balance of signer before swap
-  //swap token caling the function
-  //check balance after swap.
-
-  import { ethers } from "hardhat";
-  const helpers = require("@nomicfoundation/hardhat-network-helpers");
+import { ethers } from "hardhat";
+const helpers = require("@nomicfoundation/hardhat-network-helpers");
 
 
 async function main() {

@@ -1,15 +1,14 @@
 require("dotenv").config({ path: ".env" });
 import { ethers } from "hardhat";
-const helpers = require("@nomicfoundation/hardhat-network-helpers");
 
 async function main() {
     
-const CONTRACT_ADDRESS = "0x8B5dB2E0F053dB73E518e3ae12A790faAf94B597";
+const CONTRACT_ADDRESS = "0xe7a28A901CF0F75CF467d54788781a27f043aD51";
 
 const amount = ethers.utils.parseEther("0.1");
  
  const Invest = await ethers.getContractAt("Iinvest", CONTRACT_ADDRESS);
- const withdraw = await Invest.invest(amount);
+ const withdraw = await Invest.invest(200);
  console.log("everything", withdraw);
 
  const contractBal = await Invest.contractBalance();
